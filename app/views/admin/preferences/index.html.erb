@@ -1,0 +1,9 @@
+<h1>Preferences</h1>
+
+<ul>
+<% @preferences.attributes.each do |preference| %>
+  <% unless preference[0] == "id" %>
+    <li><%= "#{preference[0].titleize} - #{preference[1].to_s.capitalize}" %></li>
+  <% end %>
+<% end %>
+</ul>
